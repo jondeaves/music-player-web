@@ -1,10 +1,10 @@
 import { rest } from 'msw'
-import fruits from './data/fruits.json'
+import songs from './data/songs.json'
 
 const handlers = [
 	rest.get(
-		'https://614c99f03c438c00179faa84.mockapi.io/fruits',
-		async (_, response, context) => response(context.json(fruits))
+		'https://65544a2a63cafc694fe64c54.mockapi.io/songs',
+		async (_, response, context) => response(context.json(songs))
 	)
 ]
 

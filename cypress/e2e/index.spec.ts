@@ -53,9 +53,9 @@ describe('Basic flow', () => {
 	it('Should render a error message', () => {
 		cy.visit('/')
 		cy.viewport('iphone-xr')
-		cy.intercept('/fruits', request => request.destroy()).as('getFruits')
+		cy.intercept('/songs', request => request.destroy()).as('getSongs')
 		cy.reload()
-		cy.wait('@getFruits')
+		cy.wait('@getSongs')
 		get('LoadingOrError').should('not.have.text', 'Loading')
 	})
 
